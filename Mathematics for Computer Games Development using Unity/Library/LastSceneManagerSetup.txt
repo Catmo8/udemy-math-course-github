@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Lecture 6-7/BitSetting.unity
+  isLoaded: 1
+  isActive: 1
