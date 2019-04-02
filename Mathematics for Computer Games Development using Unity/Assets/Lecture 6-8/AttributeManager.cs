@@ -14,7 +14,7 @@ public class AttributeManager : MonoBehaviour
 
 
     public Text attributeDisplay;
-    int attributes = 0;
+    public int attributes = 0;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -42,20 +42,19 @@ public class AttributeManager : MonoBehaviour
         {
             attributes &= ~MAGIC;
         }
-        //adds intelligence, magic and charisma
-        else if (other.gameObject.tag == "IMC")
+        else if (other.gameObject.tag == "REMOVE")
+        {
+            attributes &= ~ (INTELLIGENCE | MAGIC);
+        }
+        else if (other.gameObject.tag == "ADD")
         {
             attributes |= (INTELLIGENCE | MAGIC | CHARISMA);
-        }
-        //removes intelligence and magic
-        else if (other.gameObject.tag == "ANTIIM")
-        {
-            attributes &= ~(INTELLIGENCE | MAGIC);
         }
         else if (other.gameObject.tag == "RESET")
         {
             attributes = 0;
         }
+
     }
 
     // Start is called before the first frame update
