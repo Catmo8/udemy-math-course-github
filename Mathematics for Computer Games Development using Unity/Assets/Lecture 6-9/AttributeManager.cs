@@ -6,12 +6,19 @@ using System;
 
 public class AttributeManager : MonoBehaviour
 {
-    static public int MAGIC = 16;
-    static public int INTELLIGENCE = 8;
-    static public int CHARISMA = 4;
-    static public int FLY = 2;
-    static public int INVISIBLE = 1;
-
+    public enum SkillAttributes
+    {
+        MAGIC = 16,
+        INTELLIGENCE = 8,
+        CHARISMA = 4,
+        FLY = 2,
+        INVISIBLE = 1,
+    }
+    //static public int MAGIC = 16;
+    //static public int INTELLIGENCE = 8;
+    //static public int CHARISMA = 4;
+    //static public int FLY = 2;
+    //static public int INVISIBLE = 1;
 
     public Text attributeDisplay;
     public int attributes = 0;
@@ -20,35 +27,35 @@ public class AttributeManager : MonoBehaviour
     {
         if(other.gameObject.tag == "MAGIC")
         {
-            attributes |= MAGIC;
+            attributes |= (int)SkillAttributes.MAGIC;
         }
         else if (other.gameObject.tag == "INTELLIGENCE")
         {
-            attributes |= INTELLIGENCE;
+            attributes |= (int)SkillAttributes.INTELLIGENCE;
         }
         else if (other.gameObject.tag == "CHARISMA")
         {
-            attributes |= CHARISMA;
+            attributes |= (int)SkillAttributes.CHARISMA;
         }
         else if (other.gameObject.tag == "FLY")
         {
-            attributes |= FLY;
+            attributes |= (int)SkillAttributes.FLY;
         }
         else if (other.gameObject.tag == "INVISIBLE")
         {
-            attributes |= INVISIBLE;
+            attributes |= (int)SkillAttributes.INVISIBLE;
         }
         else if (other.gameObject.tag == "ANTIMAGIC")
         {
-            attributes &= ~MAGIC;
+            attributes &= ~(int)SkillAttributes.MAGIC;
         }
         else if (other.gameObject.tag == "REMOVE")
         {
-            attributes &= ~ (INTELLIGENCE | MAGIC);
+            attributes &= ~ ((int)SkillAttributes.INTELLIGENCE | (int)SkillAttributes.MAGIC);
         }
         else if (other.gameObject.tag == "ADD")
         {
-            attributes |= (INTELLIGENCE | MAGIC | CHARISMA);
+            attributes |= ((int)SkillAttributes.INTELLIGENCE | (int)SkillAttributes.MAGIC | (int)SkillAttributes.CHARISMA);
         }
         else if (other.gameObject.tag == "RESET")
         {
