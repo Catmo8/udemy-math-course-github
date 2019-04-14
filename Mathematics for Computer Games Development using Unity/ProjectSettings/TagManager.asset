@@ -13,6 +13,9 @@ TagManager:
   - IMC
   - ANTIIM
   - RESET
+  - REMOVE
+  - ADD
+  - MAGIC_DOOR
   layers:
   - Default
   - TransparentFX
@@ -23,9 +26,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
+  - Sphere
+  - Cube
+  - Capsule
   - 
   - 
   - 

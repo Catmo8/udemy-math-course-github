@@ -60,6 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Lecture 11\HitRay.cs" />
+    <Compile Include="Assets\Lecture 13-14\CreateBoard.cs" />
     <Compile Include="Assets\Lecture 5\SetBits.cs" />
     <Compile Include="Assets\Lecture 6-9\AttributeManager.cs" />
     <Compile Include="Assets\Lecture 6-9\DoorManager.cs" />
