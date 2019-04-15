@@ -381,6 +381,7 @@ MonoBehaviour:
   - {fileID: 7640780226382824646, guid: 41617882fd3544dbe8471c917df8475a, type: 3}
   housePrefab: {fileID: 5958316442239806738, guid: 33dd7643a2e11463cbf445ab0bc38f2a,
     type: 3}
+  treePrefab: {fileID: 100018, guid: 1b2acce138aca27428a6e87fe3c474a5, type: 3}
   score: {fileID: 419185558}
 --- !u!4 &692167057
 Transform:

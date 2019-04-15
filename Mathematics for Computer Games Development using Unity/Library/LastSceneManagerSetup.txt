@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Lecture 13-14/ResourceGame.unity
+- path: Assets/Section 3/Lecture 17-19/DrawingLines.unity
   isLoaded: 1
   isActive: 1
